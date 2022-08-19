@@ -1,0 +1,24 @@
+.homeContentRow{
+    margin: 0px 0 40px 30px;
+}
+.homeContentRow h4{
+    margin: 0 0 15px 0;
+}
+.homeContentPosters{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    align-items: center;
+}
+.homeContentThumbnail{
+    height: 150px;
+    border-radius: 6px;
+    margin-right: 6px;
+    transition: 350ms;
+    cursor: pointer;
+}
+.homeContentThumbnail:hover{
+    height: 170px;
+}
