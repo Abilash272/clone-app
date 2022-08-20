@@ -13,7 +13,7 @@ function SignInPage() {
         event.preventDefault();
         if(username === "sample@gmail.com") {
             if(password === "123")
-                navigate("/clone-app/watch");
+                navigate("/watch");
             else
                 setError("Wrong password")
         }else{

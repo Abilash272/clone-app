@@ -12,7 +12,7 @@ function HomePage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        navigate("/clone-app/signin/")
+        navigate("/signin")
     } 
 
     return (
@@ -22,7 +22,7 @@ function HomePage() {
             <div className='homePage-Header'>
                 <img className='homePage-Header-Logo' src={require('../../Components/images/Logonetflix.png')} alt="Netflix Logo" />
                 <button className='homePage-Header-Signin'>
-                    <a href="/clone-app/signin">Sign In</a>
+                    <a href="/signin">Sign In</a>
                 </button>
             </div>
 
