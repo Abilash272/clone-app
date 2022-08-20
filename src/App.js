@@ -12,9 +12,9 @@ function App() {
     return(
             <AppContext.Provider value={{username, setUsername, password, setPassword}}>
                 <Routes>
-                    <Route exact path="/clone-app" element={<HomePage />} />
-                    <Route exact path="/clone-app/signin" element={<SignInPage />} />
-                    <Route exact path="/clone-app/watch" element={<MainPage />} />
+                    <Route exact path="/" element={<HomePage />} />
+                    <Route exact path="/signin/" element={<SignInPage />} />
+                    <Route exact path="/watch/" element={<MainPage />} />
                 </Routes>
             </AppContext.Provider>
     )
