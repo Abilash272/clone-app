@@ -13,8 +13,8 @@ function App() {
             <AppContext.Provider value={{username, setUsername, password, setPassword}}>
                 <Routes>
                     <Route exact path="/" element={<HomePage />} />
-                    <Route exact path="/signin/" element={<SignInPage />} />
-                    <Route exact path="/watch/" element={<MainPage />} />
+                    <Route path="/signin" element={<SignInPage />} />
+                    <Route path="/watch" element={<MainPage />} />
                 </Routes>
             </AppContext.Provider>
     )
