@@ -12,7 +12,7 @@ function HomePage() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        navigate("/#/signin")
+        navigate("/signin")
     } 
 
     return (
