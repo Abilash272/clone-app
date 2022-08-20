@@ -2,7 +2,7 @@ import React, { createContext, useState } from "react";
 import HomePage from "./Page/HomePage/HomePage";
 import MainPage from "./Page/MainPage/MainPage";
 import SignInPage from "./Page/SignInPage/SignInPage";
-import { Routes, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 
 export const AppContext = createContext(null);
 function App() {
@@ -11,11 +11,11 @@ function App() {
     console.log("user is ",username);
     return(
             <AppContext.Provider value={{username, setUsername, password, setPassword}}>
-                <Routes>
+                <Switch>
                     <Route exact path="/" element={<HomePage />} />
                     <Route path="/signin" element={<SignInPage />} />
                     <Route path="/watch" element={<MainPage />} />
-                </Routes>
+                </Switch>
             </AppContext.Provider>
     )
 }
