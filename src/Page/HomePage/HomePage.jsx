@@ -3,7 +3,7 @@ import QandA from "../../Component/QandA/QandA";
 import Questions from "../../Component/QandA/Questions";
 import "./HomePage.css";
 import { AppContext } from "../../App";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function HomePage() {
     const [showAnswer, setShowAnswer] = useState(false);
@@ -21,9 +21,9 @@ function HomePage() {
 
             <div className='homePage-Header'>
                 <img className='homePage-Header-Logo' src={require('../../Components/images/Logonetflix.png')} alt="Netflix Logo" />
-                <button className='homePage-Header-Signin'>
-                    <a href="/#/signin">Sign In</a>
-                </button>
+                <Link to={"/signin"}>
+                    <button className='homePage-Header-Signin'>Sign In</button>
+                </Link>
             </div>
 
             <div className="homePage-banner">
