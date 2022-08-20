@@ -1,17 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import QandA from "../../Component/QandA/QandA";
 import Questions from "../../Component/QandA/Questions";
-import "./HomePage.css"
+import "./HomePage.css";
+import { AppContext } from "../../App";
+import { useNavigate } from "react-router-dom";
 
 function HomePage() {
     const [showAnswer, setShowAnswer] = useState(false);
+    const {setUsername} = useContext(AppContext);
+    const navigate = useNavigate();
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        navigate("/clone-app/signin/")
+    } 
+
     return (
 
         <div className="homePage">
 
             <div className='homePage-Header'>
                 <img className='homePage-Header-Logo' src={require('../../Components/images/Logonetflix.png')} alt="Netflix Logo" />
-                <button className='homePage-Header-Signin'>Sign In</button>
+                <button className='homePage-Header-Signin'>
+                    <a href="/clone-app/signin">Sign In</a>
+                </button>
             </div>
 
             <div className="homePage-banner">
@@ -20,10 +32,10 @@ function HomePage() {
                         <h1>Unlimited movies, TV <br />shows and more.</h1>
                         <h2>Watch anywhere. Cancel anytime.</h2>
                         <h3>Ready to watch? Enter your email to create or restart your membership.</h3>
-                        <form className="homePage-bannerBox">
-                            <input required className='homePage-bannerEmail' type="email" placeholder='Email address' />
+                        <form onSubmit={handleSubmit} className="homePage-bannerBox">
+                            <input onChange={(event) => setUsername(event.target.value)} required className='homePage-bannerEmail' type="email" placeholder='Email address' />
                             <button type='submit' className='homePage-bannerButton'>
-                                Get Started
+                                Get Started   
                                 <i className="bannerButtonArrow fa-solid fa-angle-right"></i>
                             </button>
                         </form>
@@ -39,7 +51,7 @@ function HomePage() {
                 </div>
                 <div className="homePage-cardImagebox">
                     <div className="homePage-cardScreen">
-                        <img className="homePage-cardTVScreenVideo" src={require('../../Components/videos/video-tv.gif')} />
+                        <img className="homePage-cardTVScreenVideo" src={require('../../Components/videos/video-tv.gif')} alt=""/>
                     </div>
                     <img className='homePage-cardTV' src={require('../../Components/images/tv.png')} alt='' />
                 </div>
@@ -64,7 +76,7 @@ function HomePage() {
                 </div>
                 <div className="homePage-cardImagebox">
                     <div className="homePage-cardScreen">
-                        <img className='homePage-cardScreenVideo' src={require('../../Components/videos/video-computer.gif')}/>
+                        <img className='homePage-cardScreenVideo' src={require('../../Components/videos/video-computer.gif')} alt=""/>
                     </div>
                     <img className='homePage-cardTV' src={require('../../Components/images/computer.png')} alt='' />
                 </div>

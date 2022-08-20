@@ -16,17 +16,19 @@ function Navbar() {
             </div>
             <div className="homeTopbarRight">
                 <i class="homeSearchIcon fa-solid fa-magnifying-glass"></i>
-                <img className='homeTopbarProfilePic' src="https://i.pinimg.com/736x/db/70/dc/db70dc468af8c93749d1f587d74dcb08.jpg" alt="" />
+                <img className='homeTopbarProfilePic' src={require("../../Components/images/avatar.png")} alt="" />
                 <button onClick={() => setShowSettings(!showSettings)} className='homeTopbarMenuBtn'><i className="fa-solid fa-sort-down"></i></button>
                 {showSettings &&
                     <div className="homeMenu">
                         <ul className='homeMenuAvatarList'>
                             <li>
-                                <img className='homeMenuAvatar' src="https://i.pinimg.com/736x/db/70/dc/db70dc468af8c93749d1f587d74dcb08.jpg" alt="" />
+                                <img className='homeMenuAvatar' src={require("../../Components/images/avatar.png")} alt="" />
                             </li>
                         </ul>
                         <ul className='homeMenuSettings'>
-                            <li>Sign out</li>
+                            <li>
+                                <a href="/clone-app">Sign out</a>
+                            </li>
                         </ul>
                     </div>
                 }

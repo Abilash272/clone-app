@@ -1,7 +1,25 @@
-import React from "react";
-import "./SignInPage.css"
+import React, { useContext } from "react";
+import "./SignInPage.css";
+import { AppContext } from "../../App";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 function SignInPage() {
+    const { username, setUsername, password, setPassword } = useContext(AppContext);
+    const navigate = useNavigate();
+    const [error, setError] = useState("");
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        if(username === "sample@gmail.com") {
+            if(password === "123")
+                navigate("/clone-app/watch");
+            else
+                setError("Wrong password")
+        }else{
+            setError("No such user!");
+        }
+    }
     return (
         <div className="login">
             <div className="login-content">
@@ -9,12 +27,14 @@ function SignInPage() {
                     <img src={require('../../Components/images/Logonetflix.png')} className="loginHeaderLogo" alt="Logo" />
                 </div>
                 <div className="loginShade">
-                    <form className="loginPopup">
+                    <form onSubmit={handleSubmit} className="loginPopup">
                         <h2>Sign In</h2>
-                        <input required className='loginInputbox' type="text" placeholder='Email or phone number' />
-                        <input required className='loginInputbox' type="password" placeholder='Password' />
+                        <input value={username} onChange={(event) => setUsername(event.target.value)} required className='loginInputbox' type="text" placeholder='Email or phone number' />
+                        <input value={password} onChange={(event) => setPassword(event.target.value)} required className='loginInputbox' type="password" placeholder='Password' />
                         <button type='submit'>Sign In</button>
-                        <span className='loginWrongPass'>wrongEntry !</span>
+                        {error &&
+                            <span className='loginWrongPass'>{error}</span>
+                        }
                         <div className="loginSavebox">
                             <input type="checkbox" id='Remember' />
                             <label name='Remember' htmlFor='Remember' >Remember me</label>

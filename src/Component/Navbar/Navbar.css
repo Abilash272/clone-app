@@ -98,3 +98,10 @@ body{
     padding-top: 10px;
     padding-bottom: 10px;
 }
+a:link{
+    text-decoration: none;
+    color: white;
+} 
+a:visited{
+    color: white;
+}    

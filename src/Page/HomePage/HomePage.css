@@ -35,6 +35,13 @@ body{
     cursor: pointer;
     margin-right: 50px;
 }
+a:link{
+    text-decoration: none;
+    color: white;
+} 
+a:visited{
+    color: white;
+}    
 .homePage-banner{
     width: 100%;
     position: relative;
@@ -218,69 +225,6 @@ hr{
     font-size: smaller;
     font-family: 'Roboto', sans-serif;
 }
-
-
-/*
-width: 48%;
-margin-right: 40px;
-transform: scale(.85);
-display: flex;
-justify-content: center;
-align-items: center;
-
-.cardComputerScreen{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+input:focus{
+    outline: none;
 }
-.cardComputerVideo{
-    max-width: 65%;
-    position: absolute;
-    margin: 30px;
-}
-.cardComputer{
-    position: relative;
-    max-width: 100%;
-}
-
-
-.FAQs{
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.FAQs h1{
-    margin: 50px;
-    font-size: 3.125rem;
-}
-.FAQs h3{
-    font-weight: 600;
-    font-size: 1.2rem;
-    margin-bottom: 1.9rem;
-    margin-top: 70px;
-}
-.FAQsMailbox{
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5rem;
-}
-.FAQsButton{
-    background-color: #dc0510;
-    border: none;
-    color: white;
-    font-size: 1.625rem;
-    padding: .7rem 2rem;
-    border-radius: 2px;
-    font-weight: 500;
-    white-space: nowrap;
-}
-.FAQsEmail{
-    width: 100%;
-    padding-left: 10px;
-    font-size: 1rem;
-    font-weight: 500;
-}
-
-}*/
