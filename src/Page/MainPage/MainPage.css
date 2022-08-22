@@ -1,0 +1,19 @@
+.playMovieContainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 20px;
+    padding: 20px 300px;
+}
+.playMovieContainer h1{
+    text-align: left;
+}
+.playMovieContainer p{
+    text-align: justify;
+}
+.closeIcon{
+    font-size: xx-large;
+    text-align: right;
+    padding: 10px 0;
+    cursor: pointer;
+}

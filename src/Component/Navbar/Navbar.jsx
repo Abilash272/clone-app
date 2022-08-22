@@ -15,7 +15,7 @@ function Navbar() {
                 </ul>
             </div>
             <div className="homeTopbarRight">
-                <i class="homeSearchIcon fa-solid fa-magnifying-glass"></i>
+                <i className="homeSearchIcon fa-solid fa-magnifying-glass"></i>
                 <img className='homeTopbarProfilePic' src={require("../../Components/images/avatar.png")} alt="" />
                 <button onClick={() => setShowSettings(!showSettings)} className='homeTopbarMenuBtn'><i className="fa-solid fa-sort-down"></i></button>
                 {showSettings &&

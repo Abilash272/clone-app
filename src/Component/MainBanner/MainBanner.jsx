@@ -1,13 +1,28 @@
-import React from "react";
-import "./MainBanner.css"
+import React, { useState, useEffect } from "react";
+import "./MainBanner.css";
+import { TRENDING, IMAGE_URL } from "../../Component/Constants";
+import axios from "axios";
 
 function MainBanner() {
+    const [title, setTitle] = useState("");
+    const [description, setDescription] = useState("");
+    const [poster, setPoster] = useState("");
+
+    useEffect(() => {
+        axios.get(TRENDING).then((response) => {
+            const randomNum = Math.floor(Math.random()*20);
+            setTitle(response.data.results[randomNum].original_title || response.data.results[randomNum].name);
+            setDescription(response.data.results[randomNum].overview);
+            setPoster(response.data.results[randomNum].backdrop_path);
+        })
+    },[])
     return(
-        <div className="homeBanner" style={{backgroundImage: `linear-gradient(0deg, rgba(17,17,17,1) 0%,.603641285615808) 20%, rgba(17,17,17,0.4642856971890319) 40%, rgba(17,17,17,0.46) 60%, rgba(17,17,17,0.66) 80%, rgba(17,17,17,1) 100%), url("https://wallpapercave.com/wp/wp9001495.jpg")` }}>
-            <img className='homeBannerImg' src="https://wallpapercave.com/wp/wp9001495.jpg" alt="" />
+        <div style={{backgroundImage: `linear-gradient(#00000099,#00000066,#0000001a,#0000001a,#0000001a,#121212cc,#111111), url("${IMAGE_URL + poster}")`}} 
+        className="homeBanner">
+            <img className='homeBannerImg' src={IMAGE_URL + poster} alt="" />
             <div className="homeBannerTextbox">
-                <h1>GODZILLA</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae tempora suscipit a eius temporibus.</p>
+                {title && <h1>{title}</h1>}
+                {description && <p>{description}</p>}
                 <div className="homeBannerButtons">
                     <button className='homeBannerPlay' ><i className="fa-solid fa-play"></i>  Play</button>
                     <button className='homeBannerInfo'><i className="fa-solid fa-circle-info"></i>  More Info</button>

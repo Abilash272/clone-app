@@ -1,17 +1,23 @@
 import React from 'react';
-import "./MainContentRow.css"
+import { SMALL_IMAGE_URL } from '../Constants';
+import "./MainContentRow.css";
+import { AppContext } from "../../Page/MainPage/MainPage";
+import { useContext } from 'react';
 
-function MainContentRow () {
+function MainContentRow (props) {
+    const {setWatch, setWatchData} = useContext(AppContext);
     return (
     <div className="homeContentRow">
-        <h4>Category</h4>
+        <h4>{props.title}</h4>
         <div className="homeContentPosters">
-            <img className='homeContentThumbnail' src="https://www.wdtn.com/wp-content/uploads/sites/45/2021/05/jc.jpg?w=900" alt="" />
-            <img className='homeContentThumbnail' src="https://www.wdtn.com/wp-content/uploads/sites/45/2021/05/jc.jpg?w=900" alt="" />
-            <img className='homeContentThumbnail' src="https://www.wdtn.com/wp-content/uploads/sites/45/2021/05/jc.jpg?w=900" alt="" />
-            <img className='homeContentThumbnail' src="https://www.wdtn.com/wp-content/uploads/sites/45/2021/05/jc.jpg?w=900" alt="" />
-            <img className='homeContentThumbnail' src="https://www.wdtn.com/wp-content/uploads/sites/45/2021/05/jc.jpg?w=900" alt="" />
-            <img className='homeContentThumbnail' src="https://www.wdtn.com/wp-content/uploads/sites/45/2021/05/jc.jpg?w=900" alt="" />
+            {props.data.map((movie, index) => {
+                return(
+                    <img onClick={() => {
+                        setWatchData(movie);
+                        setWatch(true);
+                    }} key={index} className={props.vertical? 'homeContentVerticalThumbnail' : 'homeContentThumbnail'} src={props.vertical? SMALL_IMAGE_URL+movie.poster_path : SMALL_IMAGE_URL+movie.backdrop_path} alt="" />
+                )
+            })}
         </div>                    
     </div>
   )

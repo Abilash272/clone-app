@@ -5,10 +5,10 @@ import SignInPage from "./Page/SignInPage/SignInPage";
 import { Routes, Route } from "react-router-dom";
 
 export const AppContext = createContext(null);
+
 function App() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    console.log("user is ",username);
     return(
             <AppContext.Provider value={{username, setUsername, password, setPassword}}>
                 <Routes>
