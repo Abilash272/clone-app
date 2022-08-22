@@ -1,21 +1,22 @@
 {
-  "files": {
-    "main.css": "/clone-app/static/css/main.f3d724e8.css",
-    "main.js": "/clone-app/static/js/main.a89ebdc5.js",
-    "static/media/Banner.jpg": "/clone-app/static/media/Banner.a906293bd1c6d0530130.jpg",
-    "static/media/video-computer.gif": "/clone-app/static/media/video-computer.e6cb0d8eb87b9bfaf3ae.gif",
-    "static/media/video-tv.gif": "/clone-app/static/media/video-tv.75604f7b6801c48ce509.gif",
-    "static/media/computer.png": "/clone-app/static/media/computer.3651a1a1405a5e404e10.png",
-    "static/media/avatar.png": "/clone-app/static/media/avatar.c7c7300b77d5beea131e.png",
-    "static/media/mobile.jpg": "/clone-app/static/media/mobile.9c9963a23a578db9039e.jpg",
-    "static/media/children.jpg": "/clone-app/static/media/children.80d293cb543e8af7f7ce.jpg",
-    "static/media/tv.png": "/clone-app/static/media/tv.0049bc70babc1f94cf88.png",
-    "index.html": "/clone-app/index.html",
-    "main.f3d724e8.css.map": "/clone-app/static/css/main.f3d724e8.css.map",
-    "main.a89ebdc5.js.map": "/clone-app/static/js/main.a89ebdc5.js.map"
-  },
-  "entrypoints": [
-    "static/css/main.f3d724e8.css",
-    "static/js/main.a89ebdc5.js"
-  ]
+  "main.css": "/clone-app/static/css/main.2fa037c6.chunk.css",
+  "main.js": "/clone-app/static/js/main.26bfbce4.chunk.js",
+  "main.js.map": "/clone-app/static/js/main.26bfbce4.chunk.js.map",
+  "runtime~main.js": "/clone-app/static/js/runtime~main.3dac79af.js",
+  "runtime~main.js.map": "/clone-app/static/js/runtime~main.3dac79af.js.map",
+  "static/js/2.e278f374.chunk.js": "/clone-app/static/js/2.e278f374.chunk.js",
+  "static/js/2.e278f374.chunk.js.map": "/clone-app/static/js/2.e278f374.chunk.js.map",
+  "index.html": "/clone-app/index.html",
+  "precache-manifest.5701a66fb5190ef4edf246c58e3d4dea.js": "/clone-app/precache-manifest.5701a66fb5190ef4edf246c58e3d4dea.js",
+  "service-worker.js": "/clone-app/service-worker.js",
+  "static/css/main.2fa037c6.chunk.css.map": "/clone-app/static/css/main.2fa037c6.chunk.css.map",
+  "static/media/SignInPage.css": "/clone-app/static/media/Banner.b32933a6.jpg",
+  "static/media/OTT.mp4": "/clone-app/static/media/OTT.76a8d353.mp4",
+  "static/media/avatar.png": "/clone-app/static/media/avatar.246a202e.png",
+  "static/media/children.jpg": "/clone-app/static/media/children.d9e8458b.jpg",
+  "static/media/computer.png": "/clone-app/static/media/computer.91ac8021.png",
+  "static/media/mobile.jpg": "/clone-app/static/media/mobile.1de1ead6.jpg",
+  "static/media/tv.png": "/clone-app/static/media/tv.77994a67.png",
+  "static/media/video-computer.gif": "/clone-app/static/media/video-computer.583558aa.gif",
+  "static/media/video-tv.gif": "/clone-app/static/media/video-tv.f800889d.gif"
 }
